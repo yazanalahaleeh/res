@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pizza heaven | menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- صفحة الترحيب -->
+    <div class="welcome-page" id="welcomePage">
+        <img src="images/background/cover1.jpg" alt="صورة غلاف المطعم" class="welcome-cover">
+        <div class="welcome-content">
+            <img src="images/logo/logo.png" alt="شعار المطعم" class="welcome-logo welcome-animation">
+            <h1 class="welcome-title welcome-animation">pizza heaven</h1>
+            <p class="welcome-description welcome-animation">تجربة طعام فريدة تجمع بين الأصالة والإبداع في أجواء عصرية راقية</p>
+            
+            <div class="social-links welcome-animation">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            
+            <div class="welcome-buttons welcome-animation">
+                <button class="btn btn-secondary welcome-btn" id="instructionsBtn">
+                    <i class="fas fa-info-circle"></i>
+                    تعليمات الاستخدام
+                </button>
+                <button class="btn btn-primary welcome-btn" id="goToOrderBtn">
+                    <i class="fas fa-utensils"></i>
+                    اطلب الآن
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- صفحة الطلبات -->
+    <div class="order-page" id="orderPage">
+        <!-- رأس الصفحة -->
+        <header class="header">
+            <div class="container header-container">
+                <div class="header-left">
+                    <img src="images/logo/logo.png" alt="شعار المطعم" class="header-logo">
+                    <div class="restaurant-info">
+                        <h2 class="restaurant-name">pizza heaven</h2>
+                        <div class="restaurant-status">
+                            <span class="status-indicator" id="statusIndicator"></span>
+                            <span id="statusText"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="restaurant-address">العيزرية - بجانب مسجد خليفه </div>
+                    <div class="restaurant-hours">مفتوح يومياً: 10:00 قبل الظهر - 3:00 بعد منتصف الليل</div>
+                    <div class="restaurant-phone">+972 59 853 1267</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- شريط التصنيفات -->
+        <div class="categories-bar">
+            <div class="container categories-container" id="categoriesContainer">
+                <button class="category-btn active" data-category="all">الكل</button>
+                <!-- سيتم إضافة التصنيفات ديناميكياً -->
+            </div>
+        </div>
+
+        <!-- عرض المنتجات -->
+        <section class="products-section">
+            <div class="container">
+                <div class="products-grid" id="productsGrid">
+                    <!-- سيتم إضافة المنتجات ديناميكياً -->
+                </div>
+            </div>
+        </section>
+
+        <!-- شريط سلة الطلبات -->
+        <div class="cart-bar" id="cartBar">
+            <div class="cart-info">
+                <div class="cart-count" id="cartCount">0</div>
+                <div class="cart-total" id="cartTotal">المجموع: 0 ريال</div>
+            </div>
+            <button class="btn btn-secondary" id="viewOrderBtn">
+                <i class="fas fa-shopping-cart"></i>
+                عرض الطلب
+            </button>
+        </div>
+    </div>
+
+    <!-- نافذة تعليمات الاستخدام -->
+    <div class="modal-overlay" id="instructionsModal">
+        <div class="modal instructions-content">
+            <button class="modal-close" id="closeInstructionsBtn">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="instructions-title">كيفية استخدام القائمة الرقمية</h2>
+            
+            <div class="instruction-step">
+                <span class="step-number">1</span>
+                <span class="step-text">تصفح المنتجات حسب التصنيف أو اعرض جميع المنتجات.</span>
+            </div>
+            
+            <div class="instruction-step">
+                <span class="step-number">2</span>
+                <span class="step-text">انقر على زر "إضافة" لإضافة منتج إلى سلة الطلبات.</span>
+            </div>
+            
+            <div class="instruction-step">
+                <span class="step-number">3</span>
+                <span class="step-text">اختر الحجم والإضافات والكمية المطلوبة.</span>
+            </div>
+            
+            <div class="instruction-step">
+                <span class="step-number">4</span>
+                <span class="step-text">انقر على "إضافة إلى السلة" لتأكيد اختيارك.</span>
+            </div>
+            
+            <div class="instruction-step">
+                <span class="step-number">5</span>
+                <span class="step-text">اضغط على "عرض الطلب" في الشريط السفلي لمراجعة طلبك.</span>
+            </div>
+            
+            <div class="instruction-step">
+                <span class="step-number">6</span>
+                <span class="step-text">اختر نوع الطلب (طاولة، استلام، توصيل) وأدخل بياناتك.</span>
+            </div>
+            
+            <div class="instruction-step">
+                <span class="step-number">7</span>
+                <span class="step-text">انقر على "إرسال الطلب" ليتم توجيهك إلى واتساب لإكمال الطلب.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة إضافة المنتج -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal">
+            <button class="modal-close" id="closeProductBtn">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="modal-title" id="productModalTitle"></h2>
+            
+            <img src="" alt="" class="product-modal-image" id="productModalImage">
+            
+            <p class="product-modal-description" id="productModalDescription"></p>
+            
+            <div class="product-options-section">
+                <div class="options-title">اختر الحجم:</div>
+                <div class="size-options" id="sizeOptions">
+                    <!-- سيتم إضافة خيارات الحجم ديناميكياً -->
+                </div>
+                
+                <div class="options-title">إضافات اختيارية:</div>
+                <div class="extras-options" id="extrasOptions">
+                    <!-- سيتم إضافة الإضافات ديناميكياً -->
+                </div>
+            </div>
+            
+            <div class="quantity-section">
+                <div class="quantity-control">
+                    <button class="quantity-btn" id="decreaseQuantity">-</button>
+                    <input type="number" class="quantity-input" id="quantityInput" value="1" min="1" max="10">
+                    <button class="quantity-btn" id="increaseQuantity">+</button>
+                </div>
+                <div class="total-price" id="totalPrice">السعر: 0 ريال</div>
+            </div>
+            
+            <button class="btn btn-primary add-to-cart-btn" id="addToCartBtn">
+                <i class="fas fa-cart-plus"></i>
+                إضافة إلى السلة
+            </button>
+        </div>
+    </div>
+
+    <!-- نافذة عرض الطلب -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal">
+            <button class="modal-close" id="closeOrderBtn">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="modal-title">طلبك</h2>
+            
+            <div class="order-items" id="orderItems">
+                <!-- سيتم إضافة عناصر الطلب ديناميكياً -->
+            </div>
+            
+            <div class="order-total">
+                <span>المجموع:</span>
+                <span id="orderTotalPrice">0 ريال</span>
+            </div>
+            
+            <div class="order-type-section">
+                <div class="options-title">اختر نوع الطلب:</div>
+                <div class="order-types">
+                    <div class="order-type" data-type="table">
+                        <div class="order-type-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="order-type-name">طاولة</div>
+                    </div>
+                    <div class="order-type" data-type="pickup">
+                        <div class="order-type-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="order-type-name">استلام</div>
+                    </div>
+                    <div class="order-type" data-type="delivery">
+                        <div class="order-type-icon">
+                            <i class="fas fa-motorcycle"></i>
+                        </div>
+                        <div class="order-type-name">توصيل</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="customer-info-section" id="customerInfoSection">
+                <!-- سيتم إضافة حقول البيانات ديناميكياً حسب نوع الطلب -->
+            </div>
+            
+            <button class="btn btn-primary send-order-btn" id="sendOrderBtn" disabled>
+                <i class="fab fa-whatsapp"></i>
+                إرسال الطلب
+            </button>
+        </div>
+    </div>
+
+    <!-- ملفات JavaScript -->
+    <script src="js/utils.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/order.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
