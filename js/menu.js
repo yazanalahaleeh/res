@@ -284,13 +284,27 @@ extras: [
                 { name: 'صوص إضافي', price: 1 },
             ]
 },
+        {
+  id: 'starter',
+  name: 'أجنحة دجاج بالباربكيو',
+  category: 'main',
+  basePrice: 15,
+  description: 'أجنحة دجاج متبلة تقدم مع صوص باربكيو',
+  ingredients: 'دجاج، صوص باربكيو',
+  allergens: 'الدجاج',
+  image: 'images/products/spicy-wings.jpg',
+  sizes: [{ name: 'حصّة', price: 15 }],
+              extras: [
+                { name: 'صوص إضافي', price: 1 },
+            ]
+},
 {
   id: 'starter2',
-  name: 'خبز بالثوم',
+  name: 'خبز بالثوم مع جبنه',
   category: 'main',
   basePrice: 10,
-  description: 'خبز محمص بالثوم',
-  ingredients: 'خبز، ثوم',
+  description: 'خبز محمص بالثوم والجبنة',
+  ingredients: 'خبز، ثوم ، جبنه',
   allergens: 'القمح، منتجات الألبان',
   image: 'images/products/garlic-bread.jpg',
   sizes: [{ name: 'حصّة', price: 10 }],
@@ -309,7 +323,7 @@ extras: [
   image: 'images/products/onion-rings.jpg',
   sizes: [{ name: 'حصّة', price: 15 }],
                 extras: [
-                { name: 'صوص إضافي', price: 1 },
+                { name: 'لا شيء', price: 0 },
             ]
 },
 {
@@ -326,9 +340,67 @@ extras: [
     { name: 'كبير', price: 15 }
   ],
                 extras: [
-                { name: 'صوص إضافي', price: 1 },
+                { name: 'اضافة جبن شيدر', price: 5 },
             ]
 },
+        {
+  id: 'starter5',
+  name: 'قطع شنبتسل',
+  category: 'main',
+  basePrice: 15,
+  description: 'قطع شنيتسل مقلية',
+  ingredients: 'قطع شنيتيل',
+  allergens: 'الدجاج',
+  image: 'images/products/Schnetel-pieces.jpg',
+  sizes: [{ name: 'حصّة', price: 15 }],
+              extras: [
+                { name: 'لا شيء', price: 0 },
+            ]
+},
+        {
+  id: 'starter6',
+  name: 'أصابع دجاج ',
+  category: 'main',
+  basePrice: 20,
+  description: 'اصابع دجاج متبلة و مقلية',
+  ingredients: 'دجاج',
+  allergens: 'الدجاج',
+  image: 'images/products/Chicken-fingers.jpg',
+  sizes: [{ name: 'حصّة', price: 20 }],
+              extras: [
+                { name: 'لا شيء', price: 0 },
+            ]
+},
+              {
+  id: 'starter7',
+  name: 'أصابع جبنة ',
+  category: 'main',
+  basePrice: 20,
+  description: 'اصابع دجاج محشوة بالموزريلا مقلية',
+  ingredients: 'جبنة',
+  allergens: 'منتجات الالبان',
+  image: 'images/products/Cheese-fingers.jpg',
+  sizes: [{ name: 'حصّة', price: 20 }],
+              extras: [
+                { name: 'لا شيء', price: 0 },
+            ]
+},
+       {
+  id: 'starter8',
+  name: 'بطاطا كيرلي',
+  category: 'main',
+  basePrice: 10,
+  description: 'بطاطا كيرلي مقلية مقرمشة',
+  ingredients: 'بطاطا، زيت',
+  image: 'images/products/cairly.jpg',
+  sizes: [
+    { name: 'وسط', price: 10 },
+    { name: 'كبير', price: 20 }
+  ],
+                extras: [
+                { name: 'لا شيء', price: 0 },
+            ]
+}, 
         {
             id: 'sandwich1',
             name: 'ساندويتش دجاج مشوي',
